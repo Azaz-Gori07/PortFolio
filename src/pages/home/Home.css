@@ -12,6 +12,7 @@ body {
     background-color: #000;
     color: #fff;
     line-height: 1.6;
+    perspective: 1500px;
 }
 
 html {
@@ -56,7 +57,6 @@ html {
     letter-spacing: 3px;
     text-transform: uppercase;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    animation: fadeInUp 0.8s ease-out;
 }
 
 .highlight-container {
@@ -113,6 +113,7 @@ html {
     position: relative;
     overflow: hidden;
     box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4);
+    transition: transform 0.5s ease;
 }
 
 .hero-image img {
@@ -147,7 +148,6 @@ html {
     margin-bottom: 2.5rem;
     font-weight: 300;
     text-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
-    animation: fadeInUp 0.8s ease-out 0.4s both;
 }
 
 .btn {
@@ -168,7 +168,6 @@ html {
     justify-content: center;
     align-items: center;
     gap: 5px;
-    animation: fadeInUp 0.8s ease-out 0.6s both;
 }
 
 .btn:hover {
@@ -221,12 +220,14 @@ html {
     border-radius: 8px;
     flex-shrink: 0;
     border: 1px solid #333;
-    transition: transform 0.3s ease, border-color 0.3s ease;
+    transform-style: preserve-3d;
+    transition: transform 0.4s ease, border-color 0.3s ease, box-shadow 0.4s ease;
 }
 
 .review-card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px) rotateY(1deg);
     border-color: #ffd700;
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.2);
 }
 
 .rating {
@@ -274,7 +275,6 @@ html {
     right: 0;
     background: linear-gradient(to left, #1a1a1a, transparent);
 }
-
 
 
 .spark {
@@ -331,6 +331,7 @@ html {
     align-items: center;
     border-radius: 20px;
     margin-top: 70px;
+    overflow: hidden;
 }
 
 .laptop {
@@ -458,6 +459,13 @@ html {
     color: #fff;
     flex-direction: column;
     margin-top: 10px;
+    transform-style: preserve-3d;
+    transition: all 0.5s ease;
+}
+
+.image-section:hover {
+    box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+    transform: translateZ(5px) rotateY(1deg);
 }
 
 .profile-image {
@@ -568,7 +576,7 @@ html {
 
 .presents:hover {
     box-shadow: 0 0 20px rgba(255, 219, 112, 0.1);
-    transform: translateY(-2px);
+    transform: translateY(-5px);
 }
 
 .presents h1 {
@@ -641,6 +649,7 @@ html {
 
 .contact-section span:hover {
     box-shadow: 0 0 15px rgba(255, 219, 112, 0.05);
+    background: #181818;
 }
 
 .contact-section span p {
@@ -674,7 +683,6 @@ html {
     text-decoration: underline;
     color: #ffed4e;
 }
-
 
 
 .services-section {
@@ -716,13 +724,14 @@ html {
     padding: 40px 30px;
     border-radius: 12px;
     border: 1px solid rgba(255, 255, 255, 0.1);
-    transition: all 0.3s ease;
+    transform-style: preserve-3d;
+    transition: all 0.4s ease;
     cursor: pointer;
 }
 
 .service-card:hover {
     background: rgba(255, 255, 255, 0.08);
-    transform: translateY(-5px);
+    transform: translateY(-8px) translateZ(10px) rotateZ(0.5deg);
     border-color: #ffd700;
     box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
 }
@@ -747,7 +756,6 @@ html {
     color: rgba(255, 255, 255, 0.7);
     line-height: 1.6;
 }
-
 
 
 .featured-section {
@@ -785,12 +793,14 @@ html {
     border: 1px solid #222;
     border-radius: 16px;
     overflow: hidden;
-    transition: border-color 0.3s, box-shadow 0.3s;
+    transform-style: preserve-3d;
+    transition: border-color 0.4s, box-shadow 0.4s, transform 0.4s ease;
 }
 
 .project-card:hover {
     border-color: #facc15;
-    box-shadow: 0 0 20px rgba(250, 204, 21, 0.2);
+    box-shadow: 0 10px 30px rgba(250, 204, 21, 0.3);
+    transform: scale(1.03) translateZ(15px);
 }
 
 .project-image {
@@ -802,7 +812,11 @@ html {
     width: 100%;
     height: 200px;
     object-fit: cover;
-    transition: opacity 0.3s ease;
+    transition: transform 0.5s ease;
+}
+
+.project-image:hover img {
+    transform: scale(1.1);
 }
 
 .overlay {
@@ -878,7 +892,6 @@ html {
 .explore-btn:hover {
     background: #ffe268;
 }
-
 
 
 .faqs-section {
@@ -1034,7 +1047,6 @@ html {
         transform: translateX(0%);
     }
 }
-
 
 
 @media (max-width: 1200px) {
