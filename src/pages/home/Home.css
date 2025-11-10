@@ -1497,7 +1497,7 @@ html {
         width: 100%;
     }
     .name h1 {
-        font-size: 3.5rem;
+        font-size: 3rem;
     }
     .hero-text {
         font-size: 1rem;
@@ -1511,7 +1511,7 @@ html {
         padding: 0.5rem 1rem;
     }
     .hero-image {
-        height: 320px;
+        height: 300px;
         width: 80%;
     }
     .review-card {
@@ -1643,6 +1643,7 @@ html {
     .profile-image {
         height: 280px;
     }
+    
 }
 
 
