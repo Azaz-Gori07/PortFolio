@@ -6,19 +6,19 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: transparent; 
+    background-color: transparent;
     color: #fff;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 1000;
-   margin-top: 5px;
-    
-    transform: translateY(0);
+    margin-top: 0;
     transition: transform 0.3s ease-in-out;
+    transform: translateY(0);
+    backdrop-filter: blur(8px);
 }
 
-.navbar.hidden {
+.navbar.navbar-hidden {
     transform: translateY(-100%);
 }
 

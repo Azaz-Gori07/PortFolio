@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import "./Navbar.css";
 
@@ -13,8 +13,32 @@ const navItems = [
 function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [activeLink, setActiveLink] = useState('home');
-    const [isVisible, setIsVisible] = useState(true);
-    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [isNavVisible, setIsNavVisible] = useState(true);
+    const prevScrollPos = useRef(0);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            const currentScrollPos = window.pageYOffset;
+            const isScrollingDown = prevScrollPos.current < currentScrollPos;
+            const scrollDelta = Math.abs(currentScrollPos - prevScrollPos.current);
+
+            // Hide navbar when scrolling down (after top 100px), show when scrolling up
+            if (currentScrollPos > 100 && scrollDelta > 5) {
+                if (isScrollingDown) {
+                    setIsNavVisible(false);
+                } else {
+                    setIsNavVisible(true);
+                }
+            } else if (currentScrollPos <= 100) {
+                setIsNavVisible(true);
+            }
+
+            prevScrollPos.current = currentScrollPos;
+        };
+
+        window.addEventListener('scroll', handleScroll, { passive: true });
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     useEffect(() => {
         const observer = new IntersectionObserver(
@@ -48,27 +72,6 @@ function Navbar() {
         };
     }, []);
 
-    useEffect(() => {
-        const handleScroll = () => {
-            const currentScrollPos = window.pageYOffset;
-            const scrollingDown = prevScrollPos < currentScrollPos;
-
-            if (currentScrollPos < 80) {
-                setIsVisible(true);
-            } else if (scrollingDown) {
-                setIsVisible(false);
-            } else {
-                setIsVisible(true);
-            }
-
-            setPrevScrollPos(currentScrollPos);
-        };
-
-        window.addEventListener('scroll', handleScroll);
-        return () => window.removeEventListener('scroll', handleScroll);
-    }, [prevScrollPos]);
-
-
     const toggleMenu = () => {
         setIsOpen(!isOpen);
     };
@@ -94,7 +97,7 @@ function Navbar() {
 
 
     return (
-        <div className={`navbar ${!isVisible ? 'hidden' : ''}`}>
+        <div className={`navbar ${!isNavVisible ? 'navbar-hidden' : ''}`}>
             <div className="navbar-logo">
                 <div className="avtar">
                     <img src="port1.png" alt="" />

@@ -59,7 +59,7 @@ function Home() {
       category: "Frontend Project",
       description:
         "A personal responsive portfolio built using React, custom CSS, and Framer Motion to showcase my work and skills.",
-      image: "https://via.placeholder.com/600x400?text=Portfolio+Preview",
+      image: "Screenshot (10).png",
       link: "#",
     },
     {
@@ -67,16 +67,8 @@ function Home() {
       category: "Full Stack Project",
       description:
         "A MERN stack e-commerce interface built to practice responsive layouts, state management, and API integration.",
-      image: "https://via.placeholder.com/600x400?text=E-Commerce+UI",
-      link: "#",
-    },
-    {
-      title: "To-Do Web App (MERN)",
-      category: "Full Stack Project",
-      description:
-        "A CRUD-based task manager built using Node.js, Express, and MongoDB with a responsive frontend.",
-      image: "https://via.placeholder.com/600x400?text=To-Do+App",
-      link: "#",
+      image: "Screenshot (11).png",
+      link: "https://all-birds-fronted.vercel.app/",
     },
     {
       title: "Creative Landing Page",
