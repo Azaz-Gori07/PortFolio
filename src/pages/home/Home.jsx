@@ -71,12 +71,12 @@ function Home() {
       link: "https://all-birds-fronted.vercel.app/",
     },
     {
-      title: "Creative Landing Page",
-      category: "UI/UX Concept",
+      title: "Movies Ticket Booking Platform.",
+      category: "Frontend Only",
       description:
         "A visually appealing landing page built with smooth animations and clean modern design.",
-      image: "https://via.placeholder.com/600x400?text=Landing+Page",
-      link: "#",
+      image: "Screenshot (14).png",
+      link: "https://quick-sow.vercel.app/",
     },
   ];
 
