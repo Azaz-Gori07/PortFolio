@@ -78,6 +78,14 @@ function Home() {
       image: "Screenshot (14).png",
       link: "https://quick-sow.vercel.app/",
     },
+    {
+      title: "Road2Dev (Learning platform)",
+      category: "Educational Project",
+      description:
+        "An interactive learning platform designed to help beginners get started with web development.",
+      image: "Screenshot (15).png",
+      link: "https://road2-dev-0a9s.vercel.app/",
+    }
   ];
 
   const reviewsData = [
