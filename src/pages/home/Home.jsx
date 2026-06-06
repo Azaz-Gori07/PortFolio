@@ -60,7 +60,7 @@ function Home() {
       description:
         "A personal responsive portfolio built using React, custom CSS, and Framer Motion to showcase my work and skills.",
       image: "Screenshot (10).png",
-      link: "#",
+      link: "/",
     },
     {
       title: "Full Stack E-Commerce Platform",
@@ -84,7 +84,7 @@ function Home() {
       description:
         "An interactive learning platform designed to help beginners get started with web development.",
       image: "Screenshot (15).png",
-      link: "https://road2-dev-0a9s.vercel.app/",
+      link: "https://road2-dev.vercel.app/",
     }
   ];
 
