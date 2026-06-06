@@ -60,7 +60,7 @@ function Home() {
       description:
         "A personal responsive portfolio built using React, custom CSS, and Framer Motion to showcase my work and skills.",
       image: "Screenshot (10).png",
-      link: "/",
+      link: "#",
     },
     {
       title: "Full Stack E-Commerce Platform",
