@@ -265,7 +265,7 @@ function Home() {
           <motion.p variants={itemVariants}>I am a dedicated full-stack web developer with a deep interest in creating functional and visually appealing web applications. I enjoy working with technologies like **React.js, Node.js, Express.js, and MongoDB** to turn ideas into real, working products. As a fresher, I’m actively seeking opportunities for an **internship or a full-time role** where I can learn from experienced professionals, enhance my skills, and make meaningful contributions to the team.</motion.p>
           <motion.button
             className='download-btn'
-            onClick={() => window.open("https://drive.google.com/uc?export=download&id=13p0CAnktMyEbxKSPrgblARwu01B0AAee")}
+            onClick={() => window.open("https://drive.google.com/uc?id=16_PesTkDs1hfWeOu2quYMVPAIALvqiql&export=download")}
             variants={itemVariants}
             whileHover={{ scale: 1.05, rotate: -1 }}
             whileTap={{ scale: 0.95 }}
