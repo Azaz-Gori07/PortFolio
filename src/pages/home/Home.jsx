@@ -242,7 +242,7 @@ function Home() {
           />
           <motion.button
             className='view-project'
-            onClick={() => window.open("https://all-birds-fronted.vercel.app")}
+            onClick={() => window.open("https://ai.zenuxs.in")}
             whileHover={{ scale: 1.1, rotate: 1 }}
             whileTap={{ scale: 0.9 }}
           >
@@ -288,7 +288,7 @@ function Home() {
             </div>
             <div className="social-links">
               <motion.a whileHover={{ scale: 1.2 }} href="https://www.instagram.com/azaz__wri8s?igsh=eXJ6N200dWVpb3ll" target="_blank"><FaInstagram className='social-icon' /></motion.a>
-              <motion.a whileHover={{ scale: 1.2 }} href="https://www.linkedin.com/in/ijaj-gori-36298338a" target="_blank"><FaLinkedin className='social-icon' /></motion.a>
+              <motion.a whileHover={{ scale: 1.2 }} href="https://www.linkedin.com/in/azaz-gori-a66985419?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank"><FaLinkedin className='social-icon' /></motion.a>
               <motion.a whileHover={{ scale: 1.2 }} href="https://github.com/Azaz-Gori07" target="_blank"><FaGithubSquare className='social-icon' /></motion.a>
             </div>
           </motion.div>
@@ -316,8 +316,9 @@ function Home() {
               <p>Developed a fully functional e-commerce website with authentication, product management, and dynamic cart system. Integrated **MongoDB Atlas** for product data and used **JWT authentication** for user security. Implemented frontend design using React + Tailwind CSS.</p>
             </motion.div>
             <motion.div className="presents" variants={itemVariants} whileHover={{ scale: 1.02, backgroundColor: "#181818" }}>
-              <h1>Chat App (Real-Time) <span>Using Socket.io</span></h1>
-              <p>Created a real-time chat app using **Socket.io** and Node.js. Included login authentication and separate user rooms for messaging. Focused on backend logic, event handling, and live communication features.</p>
+              <h1>Viral Drift <span>Using Socket.io</span></h1>
+              <p className='yyy'>(Social Media Manager)</p>
+              <p>Created <b style={{color: "HighlightText"}}>ViralDrift</b>, an AI-powered social media management platform for generating, scheduling, and organizing content. Worked on backend services, authentication, API integrations, and performance optimization. Currently under active development and not yet publicly released.</p>
             </motion.div>
 
             <motion.h2 style={{ marginTop: "30px", marginBottom: "30px" }} variants={itemVariants}><RiSparkling2Line className='spark' /> Education</motion.h2>
@@ -343,7 +344,7 @@ function Home() {
             <p>Email</p> <h2>azazkhan007007@gmail.com</h2>
           </motion.span>
           <motion.span variants={itemVariants} whileHover={{ x: 5 }}>
-            <p>Linkedin</p> <motion.a href="https://www.linkedin.com/in/ijaj-gori-36298338a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" whileHover={{ color: "#ffed4e" }}>LinkedIn Profile</motion.a>
+            <p>Linkedin</p> <motion.a href="https://www.linkedin.com/in/azaz-gori-a66985419?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" whileHover={{ color: "#ffed4e" }}>LinkedIn Profile</motion.a>
           </motion.span>
           <motion.span variants={itemVariants} whileHover={{ x: 5 }}>
             <p>Address</p> <h2>sikar, Raj.</h2>
